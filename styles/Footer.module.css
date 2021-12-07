@@ -1,0 +1,22 @@
+
+
+.firstRow{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+.firstRow > div{
+    padding:5px;
+}
+
+.secondRow{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.secondRow > div{
+    padding:5px;
+}
