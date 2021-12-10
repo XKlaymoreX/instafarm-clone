@@ -48,7 +48,7 @@ export default function Home({data}) {
 }
 
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 
      const res = await fetch('https://61b34d72af5ff70017ca1e38.mockapi.io/Stories')
      const data = await res.json();
@@ -65,7 +65,5 @@ export async function getStaticProps(context) {
     return {
       props: {
         data
-      },
-      revalidate: 20,
-    }
+      }}
   }
