@@ -1,11 +1,11 @@
 import React from 'react'
 import style from '../styles/Navbar.module.css'
-import HomeIcon from '../public/media/svgcomponents/HomeIcon'
-import ChatIcon from '../public/media/svgcomponents/ChatIcon'
-import NewPostIcon from '../public/media/svgcomponents/NewPostIcon'
-import FindIcon from '../public/media/svgcomponents/FindIcon'
-import FeedIcon from '../public/media/svgcomponents/FeedIcon'
-import UserIcon from '../public/media/svgcomponents/UserIcon'
+import HomeIcon from './svgcomponents/HomeIcon'
+import ChatIcon from './svgcomponents/ChatIcon'
+import NewPostIcon from './svgcomponents/NewPostIcon'
+import FindIcon from './svgcomponents/FindIcon'
+import FeedIcon from './svgcomponents/FeedIcon'
+import UserIcon from './svgcomponents/UserIcon'
 import Link from 'next/link'
 
 const Navbar = () => {

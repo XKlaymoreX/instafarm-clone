@@ -1,0 +1,107 @@
+.homeSection{
+    padding-left: 80px;
+    padding-right: 80px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gridTrack{
+    margin: auto;
+    height: 118px;
+    width: 100%;
+    max-width: 614px;
+    min-width: 614px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow-x: hidden;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 4px;
+}
+
+.sliderLeft{
+    position: absolute;
+    transform: rotateZ(-180deg);
+    left: 10px;
+    top: 45px;
+    cursor: pointer;
+}
+
+.sliderRight{
+    position: absolute;
+    right:10px;
+    top: 45px;
+    cursor: pointer;
+}
+
+
+.storiesGrid {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    transition: .5s;
+}
+
+
+.story{
+    height: 100%;
+    width: 87px;
+    min-width: 87px;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.storyImage{
+    width: 66px;
+    height: 66px;
+    border: 3px solid rgb(215, 215, 215);
+    border-radius: 50%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+.highlitedStory{
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(225,165,65,0.7749474789915967) 0%, rgba(225,65,213,0.7749474789915967) 100%) border-box;
+}
+
+.storyUser{
+    padding-top: 5px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.sofia{
+    color: white;
+    font-family: 'Grand Hotel';
+    font-size: 25px;
+    border: 1px solid purple;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: purple;
+}
+
+
+
+.sofia:hover{
+    color: purple;
+    background-color: white;
+    border: 2px solid purple;
+    cursor: pointer;
+    
+}

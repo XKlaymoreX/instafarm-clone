@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout.jsx'
+import StoryGrid from '../components/StoryGrid'
+import React, {useEffect} from 'react'
 
-export default function Home() {
+export default function Home({data}) {
+
     return (
         <div>
             <Head>
@@ -31,9 +34,38 @@ export default function Home() {
                 </meta>
 
             </Head>
+
             <Layout>
-              
+                <section className={styles.homeSection}>
+                    <StoryGrid items={data}/>
+                </section>
             </Layout>
+
+
+
         </div>
     )
 }
+
+
+export async function getStaticProps(context) {
+
+     const res = await fetch('https://61b34d72af5ff70017ca1e38.mockapi.io/Stories')
+     const data = await res.json();
+
+     if(!data){
+         return {
+             redirect: {
+                 destination : '/',
+                 permanent : false
+             }
+         }
+     }
+
+    return {
+      props: {
+        data
+      },
+      revalidate: 20,
+    }
+  }
