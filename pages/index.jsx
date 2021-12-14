@@ -3,9 +3,10 @@ import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout.jsx'
 import StoryGrid from '../components/StoryGrid'
 import React, {useEffect} from 'react'
+import PostsGrid from '../components/PostsGrid'
+import { server } from '../config/server'
 
 export default function Home({data}) {
-
     return (
         <div>
             <Head>
@@ -38,6 +39,7 @@ export default function Home({data}) {
             <Layout>
                 <section className={styles.homeSection}>
                     <StoryGrid items={data}/>
+                    <PostsGrid items={null}/>
                 </section>
             </Layout>
 
@@ -49,9 +51,8 @@ export default function Home({data}) {
 
 
 export async function getServerSideProps(context) {
-
-     const res = await fetch('https://61b34d72af5ff70017ca1e38.mockapi.io/Stories')
-     const data = await res.json();
+     const res = await fetch(`${server}/api/stories`)
+     const {data} = await res.json();
 
      if(!data){
          return {

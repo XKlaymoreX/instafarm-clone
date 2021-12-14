@@ -85,23 +85,3 @@
 }
 
 
-.sofia{
-    color: white;
-    font-family: 'Grand Hotel';
-    font-size: 25px;
-    border: 1px solid purple;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 6px;
-    background-color: purple;
-}
-
-
-
-.sofia:hover{
-    color: purple;
-    background-color: white;
-    border: 2px solid purple;
-    cursor: pointer;
-    
-}
