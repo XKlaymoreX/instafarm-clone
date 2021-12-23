@@ -8,9 +8,7 @@
 .gridTrack{
     margin: auto;
     height: 118px;
-    width: 100%;
     max-width: 614px;
-    min-width: 614px;
     margin-top: 30px;
     margin-bottom: 30px;
     position: relative;
@@ -85,3 +83,103 @@
 }
 
 
+.postsGrid{
+    max-width: 614px;
+    margin: auto;
+    height: auto;
+}
+
+
+.post{
+    display: flex;
+    flex-flow: column;
+    margin-top: 20px;
+    max-width: 614px;
+    height: auto;
+}
+
+.postHeader{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(215, 215, 215);
+    border-left: 1px solid rgb(215, 215, 215);
+    border-right: 1px solid rgb(215, 215, 215);
+
+}
+
+.postHeaderInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.postHeaderInfo > h5{
+    padding: 15px;
+}
+
+.postHeaderOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor:pointer
+}
+
+.postHeaderImage{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: fill;
+    object-position: center;
+
+}
+
+.postImageContainer{
+    border: none;
+}
+
+.postImage{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+}
+
+
+.postFeedback{
+    height: 54px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postFeedbackActions{
+    height: 100%;
+    padding: 0 15px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postFeedbackActions > svg {
+    width: 24px;
+    height: 24px;
+}
+
+.postSave{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postSave > svg{
+    height: 24px;
+    width: 24px;
+}

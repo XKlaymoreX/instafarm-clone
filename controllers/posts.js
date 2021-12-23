@@ -1,11 +1,12 @@
 import HttpResponse from "../utils/HttpResponse";
 
+export const getPosts = async (req,res) => {
 
-export const getStories = async (req, res) => {
     var myResponse = new HttpResponse();
+
     try {
-        const request = await fetch('https://61b34d72af5ff70017ca1e38.mockapi.io/Stories')
-        const data = await request.json();
+        var request = await fetch("https://61b34d72af5ff70017ca1e38.mockapi.io/Posts");
+        var data = await request.json();
         if(!data || typeof(data) !== "object"){
             throw {error:"Data Not Found!"};
         }
@@ -13,7 +14,6 @@ export const getStories = async (req, res) => {
         myResponse.message = request.statusText;
         myResponse.success = request.status == 200 ? true : false;
         myResponse.data = data;
-
         return res.status(200).json(myResponse);
     } catch (error) {
         myResponse.statusCode = 500;
@@ -22,5 +22,5 @@ export const getStories = async (req, res) => {
         myResponse.data = null;
         return res.status(500).json(myResponse);
     }
-}
 
+ }

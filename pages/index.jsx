@@ -6,7 +6,7 @@ import React, {useEffect} from 'react'
 import PostsGrid from '../components/PostsGrid'
 import { server } from '../config/server'
 
-export default function Home({data}) {
+export default function Home({stories,posts}) {
     return (
         <div>
             <Head>
@@ -38,8 +38,11 @@ export default function Home({data}) {
 
             <Layout>
                 <section className={styles.homeSection}>
-                    <StoryGrid items={data}/>
-                    <PostsGrid items={null}/>
+                    <StoryGrid items={stories.data}/>
+                    <PostsGrid items={posts.data}/>
+                </section>
+                <section>
+                    
                 </section>
             </Layout>
 
@@ -50,11 +53,12 @@ export default function Home({data}) {
 }
 
 
-export async function getServerSideProps(context) {
-     const res = await fetch(`${server}/api/stories`)
-     const {data} = await res.json();
+export async function getServerSideProps() {
+     var res = await fetch(`${server}/api/stories`)
+     var stories = await res.json();
 
-     if(!data){
+
+     if(!stories){
          return {
              redirect: {
                  destination : '/',
@@ -63,8 +67,21 @@ export async function getServerSideProps(context) {
          }
      }
 
+     var res1 = await fetch(`${server}/api/posts`)
+     var posts = await res1.json();
+
+     if(!posts){
+        return {
+            redirect: {
+                destination : '/',
+                permanent : false
+            }
+        }
+    }
+     
     return {
       props: {
-        data
+        stories,
+        posts
       }}
   }
