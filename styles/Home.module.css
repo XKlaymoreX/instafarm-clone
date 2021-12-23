@@ -141,6 +141,8 @@
 
 .postImageContainer{
     border: none;
+    width: 100%;
+    height: auto;
 }
 
 .postImage{
