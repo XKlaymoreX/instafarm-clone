@@ -6,7 +6,6 @@ const CommentIcon = () => {
         width="24"
         height="24"
         fill="#262626"
-        ariaLabel="Commenta"
         className="_8-yf5"
         color="#262626"
         viewBox="0 0 24 24"

@@ -70,9 +70,16 @@
 }
 
 .highlitedStory{
+    width: 66px;
+    height: 66px;
     border: 3px solid transparent;
     border-radius: 50%;
     background: linear-gradient(45deg, rgba(225,165,65,0.7749474789915967) 0%, rgba(225,65,213,0.7749474789915967) 100%) border-box;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .storyUser{
